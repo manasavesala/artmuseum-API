@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Oswald" rel="stylesheet">
+    <title>Harvard Art Museums </title>
+  </head>
+  <style>
+      .mySlides {display:none;}
+      </style>
+  <body>
+      
+      <div class= "container">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark">
+              <a class="navbar-brand" href="#"><h3>Harvard Art Museums </h3></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#" id="period">Time Period </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" id="century">Century</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" id="classification">Classification</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#" id="technique">Technique</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#" id="image">Images</a>
+                  </li>
+                </ul>
+                <form class="form-inline" id="search">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search by artist"  aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+              </div>
+            </nav>
+          <!-- <form id="random">
+           <p> <button class="btn-success"type ="submit" id="gallery">Gallery</button></p>
+           <p> <button class="btn-success"type ="submit" id="period">period</button></p>
+           <p> <button class="btn-success"type ="submit" id="place">place</button></p>
+           <p> <button class="btn-success"type ="submit" id="exhibition">exhibition</button></p>
+           <p> <button class="btn-success"type ="submit" id="century">century</button></p>
+          </form>
+      </div>
+      <hr>
+      <p>Output:</p>
+      <div id="output" > </div> -->
+      <hr>
+      
+    </div>
+      <hr>
+      <div class="images" align="middle">
+      <img class="mySlides" src="https://idscache.harvardartmuseums.org/ids/view/47459208?width=3000&height=3000" alt=""height="600" width="600" >
+      <img class="mySlides" src ="https://s3.amazonaws.com/media.harvardartmuseums.org/production/file_uploads/SpecialCollection/image_introductions/000/000/006/hero/18737484.jpg" alt="" height="600" width="600">
+      <img class="mySlides" src="https://s3.amazonaws.com/media.harvardartmuseums.org/production/uploaded_files/tour_builder/o_1d167i62u3031t5idh7v4s1s5n7.jpg?width=535" height="600" width="600" >
+      <img class="mySlides" src="https://idscache.harvardartmuseums.org/ids/view/43182361?width=3000&height=3000"  height="600" width="600" >
+        <br>
+
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+    <hr>
+    <div id="output" align="center" > </div>
+    <div id="output1" align="center" > </div>
+    <div id="output2" align="center"> </div>
+    <div id="output3" align="center"> </div>
+    <div id="imageshow" align="center"> </div>
+
+    <div id="artistOutput" align="center"></div>
+
+    
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          x[slideIndex-1].style.display = "block";  
+        }
+        </script>
+  </body>
+</html>
