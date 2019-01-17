@@ -9,10 +9,10 @@ import { Art } from "./art.js";
 $(document).ready(function() {
     $('#period').click(function() {
       event.preventDefault();
-      $("#output1").hide();
-      $("#output2").hide();
-      $("#output3").hide();
-      $('#output').empty();
+      $("#output1").empty();
+      $("#output2").empty();
+      $("#output3").empty();
+      $('#output').text();
       
 
       let art = new Art();
@@ -22,7 +22,7 @@ $(document).ready(function() {
       promise.then(function(response) {
        
       let body = JSON.parse(response);
-      for(let i=0 ; i< 25; i++){
+      for(let i=0 ; i< body.records.length; i++){
         $('#output').append("<li style='list-style: none;'> " + "<a href='https://en.wikipedia.org/wiki/Wikipedia' >"+ `${body.records[i].name}` + "</a>" + "</li>");
       }
       })
@@ -30,10 +30,10 @@ $(document).ready(function() {
 
     $('#century').click(function() {
       event.preventDefault();
-      $("#output").hide();
-      $("#output2").hide();
-      $("#output3").hide();
-      $('#output1').empty();
+      $("#output").empty();
+      $("#output2").empty();
+      $("#output3").empty();
+      $('#output1').text();
 
 
       let art = new Art();
@@ -43,7 +43,7 @@ $(document).ready(function() {
       promise.then(function(response) {
         
       let body = JSON.parse(response);
-      for(let i=0 ; i< 25; i++){
+      for(let i=0 ; i< body.records.length; i++){
         $('#output1').append("<li style='list-style: none;'> " + "<a href='https://en.wikipedia.org/wiki/Wikipedia' >"+ `${body.records[i].name}` + "</a>" + "</li>");
       }
       })
@@ -51,10 +51,10 @@ $(document).ready(function() {
 
     $('#classification').click(function() {
       event.preventDefault();
-      $("#output").hide();
-      $("#output1").hide();
-      $("#output3").hide();
-      $('#output2').empty();
+      $("#output").empty();
+      $("#output1").empty();
+      $("#output3").empty();
+      $('#output2').text();
 
 
       let art = new Art();
@@ -65,7 +65,7 @@ $(document).ready(function() {
         
       let body = JSON.parse(response);
       console.log(body);
-      for(let i=0 ; i< 25; i++){
+      for(let i=0 ; i< body.records.length; i++){
         $('#output2').append("<li style='list-style: none;'> " + "<a href='https://en.wikipedia.org/wiki/Wikipedia' >"+ body.records[i].name + "</a>" + "</li>");
       }
       })
@@ -73,10 +73,10 @@ $(document).ready(function() {
 
     $('#technique').click(function() {
       event.preventDefault();
-      $("#output").hide();
-      $("#output1").hide();
-      $("#output2").hide();
-      $('#output3').empty();
+      $("#output").empty();
+      $("#output1").empty();
+      $("#output2").empty();
+      $('#output3').text();
 
       let art = new Art();
       let promise = art.technique();
@@ -85,7 +85,7 @@ $(document).ready(function() {
       promise.then(function(response) {
         
       let body = JSON.parse(response);
-      for(let i=0 ; i< 25; i++){
+      for(let i=0 ; i< body.records.length; i++){
         $('#output3').append("<li style='list-style: none;'> " + "<a href='https://en.wikipedia.org/wiki/Wikipedia' >"+ `${body.records[i].name}` + "</a>" + "</li>");
       }
       })
