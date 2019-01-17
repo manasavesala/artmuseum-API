@@ -12,7 +12,7 @@ $(document).ready(function() {
       $("#output1").empty();
       $("#output2").empty();
       $("#output3").empty();
-      $('#output').text();
+      $('#output').empty();
       
 
       let art = new Art();
@@ -33,7 +33,7 @@ $(document).ready(function() {
       $("#output").empty();
       $("#output2").empty();
       $("#output3").empty();
-      $('#output1').text();
+      $('#output1').empty();
 
 
       let art = new Art();
@@ -54,7 +54,7 @@ $(document).ready(function() {
       $("#output").empty();
       $("#output1").empty();
       $("#output3").empty();
-      $('#output2').text();
+      $('#output2').empty();
 
 
       let art = new Art();
@@ -76,7 +76,7 @@ $(document).ready(function() {
       $("#output").empty();
       $("#output1").empty();
       $("#output2").empty();
-      $('#output3').text();
+      $('#output3').empty();
 
       let art = new Art();
       let promise = art.technique();
