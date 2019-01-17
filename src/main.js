@@ -58,14 +58,15 @@ $(document).ready(function() {
 
 
       let art = new Art();
-      let promise = art.classification();
+      let newpromise = art.classification();
      
 
-      promise.then(function(response) {
+      newpromise.then(function(response) {
         
       let body = JSON.parse(response);
+      console.log(body);
       for(let i=0 ; i< 25; i++){
-        $('#output2').append("<li style='list-style: none;'> " + "<a href='https://en.wikipedia.org/wiki/Wikipedia' >"+ `${body.records[i].name}` + "</a>" + "</li>");
+        $('#output2').append("<li style='list-style: none;'> " + "<a href='https://en.wikipedia.org/wiki/Wikipedia' >"+ body.records[i].name + "</a>" + "</li>");
       }
       })
     });
@@ -89,50 +90,7 @@ $(document).ready(function() {
       }
       })
     });
-    // $('#image').click(function() {
-    //   event.preventDefault();
-    //   $("#output").hide();
-    //   $("#output1").hide();
-    //   $("#output2").hide();
-    //   $("#output3").hide();
-    //   $("#images").hide();
-    //   $('#imageshow').empty();
-
-    //   let art = new Art();
-    //   let promise = art.images();
-     
-
-    //   promise.then(function(response) {
-       
-    //   let body = JSON.parse(response);
-    //   for(let i=0 ; i< 25; i++){
-    //     $('#output').append("<li style='list-style: none;'> " + "<img src="+ "'" + `${body.records[i].baseimageurl}` +"'" + " > </li>");
-    //   }
-    //   })
-    // });
-
-    // $("#search)".submit(function() {
-    //   event.preventDefault();
-    //   $("#output").hide();
-    //   $("#output1").hide();
-    //   $("#output2").hide();
-    //   $("#output3").hide();
-
-
-    //   let  = $("#artist").val();
-
-    //   let art = new Art();
-    //   let promise = art.sarchByArtist();
-
-    //   promise.then(function(response) {
-       
-    //     let body = JSON.parse(response);
-    //     console.log(body);
-    //     for(let i=0 ; i< 25; i++){
-    //       $('#artistOutput').append("<li style='list-style: none;'> " + "<a href='https://en.wikipedia.org/wiki/Wikipedia' >"+ `${body.records[i].name}` + "</a>" + "</li>");
-    //     }
-    //     })
-    // })
+   
 
    
   });

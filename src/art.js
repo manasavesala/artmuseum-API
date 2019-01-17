@@ -61,37 +61,6 @@ export class Art {
         });
     }
 
-    // images() {
-    //     return new Promise(function(resolve, reject) {
-    //         let request = new XMLHttpRequest();
-    //         let url = `https://api.harvardartmuseums.org/images?apikey=${process.env.API_KEY}`;
-    //         request.onload = function() {
-    //             if(this.status === 200) {
-    //                 resolve(request.response);
-    //             } else {
-    //                 reject(Error(request.statusText));
-    //             }
-    //         }
-    //         request.open("GET", url, true);
-    //         request.send();
-    //     });
-    // }
-
-    // searchByArtist(artist) {
-    //     return new Promise(function(resolve, reject) {
-    //         let request = new XMLHttpRequest();
-    //         let url = `https://bikeindex.org:443/api/v2/bikes_search?page=1&colors=${artist}&access_token=Bike Index API V2`;
-    //         request.onload = function() {
-    //             if(this.status === 200) {
-    //                 resolve(request.response);
-    //             } else {
-    //                 reject(Error(request.statusText));
-    //             }
-    //         }
-    //         request.open("GET", url, true);
-    //         request.send();
-    //     });
-    // }
 
 
     
